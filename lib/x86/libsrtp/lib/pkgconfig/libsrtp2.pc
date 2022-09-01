@@ -1,0 +1,12 @@
+prefix=/opt/x86/libsrtp
+exec_prefix=/opt/x86/libsrtp
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libsrtp2
+Version: 2.5.0-pre
+Description: Library for SRTP (Secure Realtime Transport Protocol)
+
+Libs: -L${libdir} -lsrtp2
+Libs.private: -L/opt/x86/openssl/lib -lcrypto -ldl -pthread 
+Cflags: -I${includedir}
